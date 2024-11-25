@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Patient Portal - Sign Up</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <header>
+        <div class="logo">MedAnywhere</div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="doctors.html">Doctors</a></li>
+                <li><a href="signup.html">Appointments</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="container">
+        <!-- Carousel section -->
+        <div class="carousel">
+            <h2>Your Health, Our Priority</h2>
+            <div class="carousel-slides">
+                <div class="slide">Access your medical history and prescriptions.</div>
+                <div class="slide">View past appointments and doctor's notes.</div>
+                <div class="slide">Your data is protected with top-tier security.</div>
+            </div>
+        </div>
+
+        <!-- Signup form section -->
+        <div class="signup-form" id="signupFormContainer">
+            <h2>Sign Up</h2>
+            <form id="signupForm">
+                <!-- First Name -->
+                <label for="first_name">First Name:</label>
+                <input type="text" id="first_name" name="first_name" required>
+                <span class="error" id="firstNameError"></span>
+                
+                <!-- Last Name -->
+                <label for="last_name">Last Name:</label>
+                <input type="text" id="last_name" name="last_name" required>
+                <span class="error" id="lastNameError"></span>
+                
+                <!-- Email -->
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                <span class="error" id="emailError"></span>
+                
+                <!-- Password -->
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required>
+                <span class="error" id="passwordError"></span>
+                
+                <!-- Confirm Password -->
+                <label for="confirmPassword">Confirm Password:</label>
+                <input type="password" id="confirmPassword" name="confirmPassword" required>
+                <span class="error" id="confirmPasswordError"></span>
+                
+                <!-- Phone -->
+                <label for="phone">Phone:</label>
+                <input type="text" id="phone" name="phone" required>
+                <span class="error" id="phoneError"></span>
+                
+                <!-- Date of Birth -->
+                <label for="date_of_birth">Date of Birth:</label>
+                <input type="date" id="date_of_birth" name="date_of_birth" required>
+                <span class="error" id="dobError"></span>
+                
+                <!-- Gender -->
+                <label>Gender:</label>
+                <div class="gender-group">
+                    <input type="radio" name="gender" value="Male" id="genderMale">
+                    <label for="genderMale">Male</label>
+                    <input type="radio" name="gender" value="Female" id="genderFemale">
+                    <label for="genderFemale">Female</label>
+                    <input type="radio" name="gender" value="Other" id="genderOther">
+                    <label for="genderOther">Other</label>
+                </div>
+                <span class="error" id="genderError"></span>
+                
+                <!-- Address -->
+                <label for="address">Address:</label>
+                <textarea id="address" name="address" required></textarea>
+                <span class="error" id="addressError"></span>
+                
+                <!-- Terms and Conditions -->
+                <div class="checkbox-group">
+                    <input type="checkbox" id="terms" name="terms" required>
+                    <label for="terms">I agree to the Terms and Conditions</label>
+                </div>
+                <span class="error" id="termsError"></span>
+                
+                <!-- Submit Button -->
+                <button type="submit">Sign Up</button>
+                
+                <!-- Link to Login Page -->
+                <p>Already have an account? <a href="#" id="showLogin">Log In</a></p>
+            </form>
+            
+        </div>
+
+        <!-- Login Form -->
+        <div class="signup-form" id="loginFormContainer" style="display: none;">
+            <h2>Login</h2>
+            <form id="loginForm">
+                <label for="identifier">Email or Username:</label>
+                <input type="text" id="identifier" name="identifier" required>
+                <span class="error" id="loginIdentifierError"></span>
+                <label for="password">Password:</label>
+                <input type="password" id="loginPassword" name="password" required>
+                <span class="error" id="loginPasswordError"></span>
+                <input type="submit" value="Login">
+            </form>
+            <span class="error" id="loginError"></span>
+            <p>Don't have an account? <a href="#" id="showSignup">Sign Up</a></p>
+        </div>
+    </div>
+    <script src="js/script.js"></script>
+</body>
+</html>

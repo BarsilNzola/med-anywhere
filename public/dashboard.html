@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Dashboard</title>
+    <link rel="stylesheet" href="css/dashboard.css">
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAxCljYKCZSFjF4-fYJ_9H73gXjdjP4KU4&callback=initMap" async defer></script>
+</head>
+<body>
+    <header>
+        <div class="logo">MedAnywhere</div>
+        <nav>
+            <ul>
+                <li><a href="#profile">Profile</a></li>
+                <li><a href="#appointments">Appointments</a></li>
+                <li><a href="#blog">Health Tips</a></li>
+                <li><a href="#contact">Contact Us</a></li>
+                <li><a id="logoutBtn">Logout</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="container">
+        <section id="profile" class="card">
+            <h2>Profile Overview</h2>
+            <div id="profileInfo"></div>
+        </section>
+        <section id="appointments" class="card">
+            <h2>Upcoming Appointments</h2>
+            <div id="appointmentList"></div>
+        </section>
+        <section id="book-appointment" class="card">
+            <h2>Book an Appointment</h2>
+            <form id="appointmentForm">
+                <input type="hidden" id="patient_id" name="patient_id" value="patient_id">
+                <select id="doctorSelect" name="doctor_id" required>
+                    <option value="">Select a Doctor</option>
+                    <!-- Options will be added here dynamically -->
+                </select>
+                <label for="appointmentDate">Select Date:</label>
+                <input type="date" id="appointment_date" name="appointment_date" required>
+                <label for="appointmentTime">Select Time:</label>
+                <input type="time" id="appointment_time" name="appointment_time" required>
+                <button type="submit">Book Appointment</button>
+            </form>
+        </section>
+        <section id="notifications" class="card">
+            <h2>Notifications</h2>
+            <div id="notificationList"></div>
+        </section>
+        <section id="locator" class="card">
+            <h2>Health Center Locator</h2>
+            <div id="map"></div>
+        </section>
+        <section id="blog" class="card">
+            <h2>Health Tips and News</h2>
+            <input type="text" id="articleSearch" placeholder="Search articles by topic or doctor">
+            <div id="articlesList"></div>
+        </section>
+        <section id="contact" class="card">
+            <h2>Contact Us</h2>
+            <form id="contactForm">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" required></textarea>
+                <button type="submit">Send Inquiry</button>
+            </form>
+            <h2>Our Location</h2>
+            <div id="contactMap"></div>
+        </section>
+    </div>
+    <script src="js/dashboard.js" defer></script>
+</body>
+</html>

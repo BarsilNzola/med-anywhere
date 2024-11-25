@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+    <link rel="stylesheet" href="css/admin-dashboard.css">
+</head>
+<body>
+    <header>
+        <div class="logo">MedAnywhere Admin</div>
+        <nav>
+            <ul>
+                <li><a href="#manage-doctors">Manage Doctors</a></li>
+                <li><a href="#manage-patients">Manage Patients</a></li>
+                <li><a href="#reports">Reports</a></li>
+                <li><a id="logoutBtn">Logout</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="container">
+        <section id="manage-doctors" class="card">
+            <h2>Manage Doctors</h2>
+            <form id="addDoctorForm">
+                <!-- Doctor form fields (similar to signup form) -->
+                <label for="first_name">First Name:</label>
+                <input type="text" id="first_name" name="first_name" required>
+                
+                <label for="last_name">Last Name:</label>
+                <input type="text" id="last_name" name="last_name" required>
+                
+                <label for="specialization">Specialization:</label>
+                <input type="text" id="specialization" name="specialization" required>
+                
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                
+                <label for="phone">Phone:</label>
+                <input type="text" id="phone" name="phone" required>
+                
+                <label for="schedule">Schedule:</label>
+                <textarea id="schedule" name="schedule" required></textarea>
+                
+                <button type="submit">Add Doctor</button>
+            </form>
+            <div id="doctorList"></div>
+        </section>
+    </section>
+    <section id="doctors-list" class="card">
+        <h2>Doctors</h2>
+        <div id="doctorsList"></div>
+        <!-- Functionality to manage doctors accounts -->
+    </section>
+    <section id="manage-patients" class="card">
+        <h2>Manage Patients</h2>
+        <div id="patientsList"></div>
+        <!-- Functionality to manage patient accounts -->
+    </section>
+    <section id="manage-appointments" class="card">
+        <h2>Manage Appointments</h2>
+        <div id="appointmentList"></div>
+        <!-- Functionality to manage appointments -->
+    </section>
+    <section id="reports" class="card">
+        <h2>Reports and Analytics</h2>
+        <div id="reportContent"></div>
+    </section>
+    </div>
+    <script src="js/admin-dashboard.js"></script>
+</body>
+</html>

@@ -1,0 +1,61 @@
+/* Doctors Page Styles */
+.container {
+    max-width: 1200px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    gap: 40px;
+}
+
+#doctor-search {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+#doctor-search input {
+    width: 80%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 1em;
+}
+
+#doctorsList {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.doctor-card {
+    background-color: #f9f9f9;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 20px;
+    width: 30%;
+    text-align: center;
+}
+
+.doctor-card h3 {
+    margin-bottom: 10px;
+}
+
+.doctor-card p {
+    margin-bottom: 10px;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .doctor-card {
+        width: 45%;
+    }
+}
+
+@media (max-width: 480px) {
+    .doctor-card {
+        width: 100%;
+    }
+}
